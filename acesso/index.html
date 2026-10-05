@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Acesso restrito | N1 Protect</title>
+    <link rel="stylesheet" href="/login/styles.css">
+    <link rel="icon" href="https://n1protect.com.br/n1protectlogo.png">
+</head>
+<body>
+    <main class="login-caixa">
+        <div class="login-marca">
+            <img src="/images/n1protectlogo.png" alt="N1 PROTECT">
+        </div>
+
+        <h1>Acesso restrito</h1>
+        <p class="login-sub">Digite a senha de acesso ao sistema para continuar.</p>
+
+        <div id="aviso" class="aviso" role="alert" aria-live="polite"></div>
+
+        <form id="form-acesso" novalidate>
+            <div class="campo">
+                <label for="acesso-senha">Senha de acesso</label>
+                <div class="campo-senha">
+                    <input type="password" id="acesso-senha" name="senha-site" autocomplete="off"
+                           placeholder="Senha do site" required autofocus maxlength="200">
+                    <button type="button" class="ver-senha" id="btn-ver-senha" aria-label="Mostrar senha" aria-pressed="false">
+                        <svg id="icone-olho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="botao botao-primario" id="btn-acessar">Acessar</button>
+        </form>
+
+        <p class="rodape-nota">Depois desta etapa você entra com seu e-mail ou com o Google.</p>
+    </main>
+
+    <script src="/config.js"></script>
+    <script src="/acesso/script.js"></script>
+</body>
+</html>
