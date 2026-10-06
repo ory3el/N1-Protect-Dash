@@ -1,9 +1,3 @@
-/* =====================================================================
-   N1 PROTECT — Aplicação principal
-   - Fonte oficial dos dados: Supabase (PostgreSQL + RLS). Nada sensível fica no navegador.
-   - Autorização: feita pelo banco (RLS). Esconder elementos aqui é só experiência de uso.
-   - Todo texto vindo do usuário passa por esc() antes de entrar em innerHTML (anti-XSS).
-   ===================================================================== */
 (function () {
     'use strict';
 
