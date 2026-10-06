@@ -189,7 +189,7 @@
         mostrarFormulario();
         if (erroRetorno) {
             aviso(erroRetorno);
-            history.replaceState(null, '', location.pathname);
+            history.replaceState(null, '', location.pathname);   // limpa a URL
         }
     }
 
