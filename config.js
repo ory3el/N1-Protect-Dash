@@ -19,8 +19,8 @@
 
   const configurado =
     /^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(CONFIG.SUPABASE_URL) &&
-    !/SEU-PROJETO/i.test(CONFIG.SUPABASE_URL) &&
-    !/COLE_AQUI/i.test(CONFIG.SUPABASE_ANON_KEY);
+    !/nxdyyqjwwvjptdfmaxpi/i.test(CONFIG.SUPABASE_URL) &&
+    !/nxdyyqjwwvjptdfmaxpi/i.test(CONFIG.SUPABASE_ANON_KEY);
 
   const N1 = { config: CONFIG, configurado, sb: null };
 
