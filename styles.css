@@ -18,7 +18,7 @@
     --foco: 0 0 0 3px rgba(82, 170, 247, 0.22);
 }
 
-/* ---------- Base ---------- */
+/* -------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +26,7 @@
     font-family: 'Segoe UI', system-ui, Roboto, Helvetica, Arial, sans-serif;
     scrollbar-width: thin;
     scrollbar-color: #343a40 var(--bg-color);
+    -webkit-tap-highlight-color: transparent;
 }
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-color); }
@@ -41,7 +42,7 @@ body {
 }
 body.app-oculto .sidebar,
 body.app-oculto .main-content,
-body.app-oculto .topbar-mobile { visibility: hidden; }   /* a interface só aparece com sessão confirmada */
+body.app-oculto .topbar-mobile { visibility: hidden; }
 body.sem-rolagem { overflow: hidden; }
 
 .oculto { display: none !important; }
@@ -52,7 +53,7 @@ body.sem-rolagem { overflow: hidden; }
 h2 { margin-bottom: 18px; color: #fff; font-weight: 600; font-size: 22px; }
 h3 { font-weight: 600; }
 
-/* ---------- Carregamento ---------- */
+/* -------------------- */
 .tela-carregando {
     position: fixed; inset: 0; z-index: 5000;
     background: var(--bg-color);
@@ -68,7 +69,7 @@ h3 { font-weight: 600; }
 }
 @keyframes gira { to { transform: rotate(360deg); } }
 
-/* ---------- Toasts ---------- */
+/* -------------------- */
 .toasts {
     position: fixed; top: 16px; right: 16px; z-index: 6000;
     display: flex; flex-direction: column; gap: 10px; max-width: min(380px, calc(100vw - 32px));
@@ -85,7 +86,7 @@ h3 { font-weight: 600; }
 .toast.info { border-left-color: var(--blue); }
 @keyframes entra { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ---------- Sidebar ---------- */
+/* -------------------- */
 .sidebar {
     width: 260px; flex: none;
     background-color: var(--panel-bg);
@@ -141,7 +142,7 @@ h3 { font-weight: 600; }
 .topbar-mobile { display: none; }
 .sidebar-fundo { display: none; }
 
-/* ---------- Conteúdo ---------- */
+/* -------------------- */
 .main-content { flex: 1; min-width: 0; padding: 36px 40px 60px; overflow-y: auto; }
 .tab-content { display: none; }
 .tab-content.active { display: block; animation: aparece 0.2s ease; }
@@ -162,7 +163,7 @@ h3 { font-weight: 600; }
 .filtros input, .filtros select { padding: 9px 12px; font-size: 14px; }
 .filtros input[type="search"] { min-width: 250px; }
 
-/* ---------- Dashboard ---------- */
+/* -------------------- */
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; margin-bottom: 18px; }
 .stats-grid .card { margin-bottom: 0; }
 .stat { display: flex; flex-direction: column; gap: 8px; }
@@ -188,7 +189,7 @@ h3 { font-weight: 600; }
 .lista-proximos .quando { color: var(--blue); font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .vazio { color: var(--text-muted); font-size: 14.5px; padding: 8px 0; }
 
-/* ---------- Formulários ---------- */
+/* -------------------- */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .form-group { display: flex; flex-direction: column; min-width: 0; }
 .form-group.full-width { grid-column: 1 / -1; }
@@ -215,7 +216,6 @@ textarea { resize: vertical; }
 select { cursor: pointer; }
 input[type="date"], input[type="time"] { color-scheme: dark; }
 
-/* Campos somente leitura (mantém a classe original) */
 .input-readonly {
     background-color: #2c2f33 !important;
     color: #b9bbbe !important;
@@ -225,7 +225,7 @@ input[type="date"], input[type="time"] { color-scheme: dark; }
 }
 textarea.input-readonly { resize: none; }
 
-/* ---------- Botões ---------- */
+/* -------------------- */
 button { font-family: inherit; }
 button.btn-primary, button.btn-secondary, button.btn-danger {
     border: none; padding: 11px 22px; border-radius: var(--raio-sm); cursor: pointer;
@@ -265,7 +265,7 @@ button.carregando::before {
 .edit-btn { color: var(--blue); }
 .delete-btn { color: #ff6b6b; }
 
-/* ---------- Tabelas ---------- */
+/* -------------------- */
 .tabela-card { padding: 0; overflow: hidden; }
 .tabela-rolagem { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
@@ -279,7 +279,7 @@ td.acoes { white-space: nowrap; }
 tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
 .td-vazio { text-align: center; color: var(--text-muted); padding: 28px 16px; }
 
-/* ---------- Badges ---------- */
+/* -------------------- */
 .badge {
     display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
     border: 1px solid transparent; white-space: nowrap;
@@ -292,7 +292,7 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
 .badge.proximo { background: rgba(82, 170, 247, 0.14); color: var(--blue); border-color: rgba(82, 170, 247, 0.35); }
 .selos { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
 
-/* ---------- Cartões de orçamento / declaração ---------- */
+/* -------------------- */
 .notes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
 .note-card {
     background-color: var(--panel-bg);
@@ -326,7 +326,7 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
 .resumo-resultado { margin-top: 16px; font-size: 14.5px; color: var(--text-muted); min-height: 22px; }
 .resumo-resultado strong { font-variant-numeric: tabular-nums; }
 
-/* ---------- Editor de itens (estilo planilha) ---------- */
+/* -------------------- */
 .itens-editor {
     border: 1px solid var(--border-forte); border-radius: var(--raio);
     background: var(--bg-color); padding: 6px; overflow: hidden;
@@ -363,7 +363,7 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
 .item-add:hover { background: var(--primary-hover); }
 .itens-vazio { padding: 10px 6px 4px; font-size: 13.5px; color: var(--text-muted); }
 
-/* ---------- Modais ---------- */
+/* -------------------- */
 .modal {
     display: none; position: fixed; inset: 0; z-index: 1000;
     background-color: rgba(0, 0, 0, 0.78); backdrop-filter: blur(2px);
@@ -412,10 +412,10 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
 }
 .relatorio-box { background: var(--bg-color); border: 1px solid var(--border); border-radius: var(--raio-sm); padding: 12px 14px; font-size: 14px; line-height: 1.7; margin-top: 14px; }
 
-/* ---------- Relógio ---------- */
+/* -------------------- */
 .relogio { margin-bottom: 14px; color: var(--text-muted); font-size: 14px; font-style: italic; }
 
-/* ---------- Documento (orçamento, OS, declaração) ---------- */
+/* -------------------- */
 .overlay {
     display: none; position: fixed; inset: 0; z-index: 2000;
     background-color: rgba(0, 0, 0, 0.88);
@@ -488,7 +488,7 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
 .doc-linhas-decl .mais { color: #1e8e3e; font-weight: 700; }
 .doc-linhas-decl .menos { color: #d32f2f; font-weight: 700; }
 
-/* ---------- Responsividade ---------- */
+/* -------------------- */
 @media (max-width: 1100px) {
     .dash-grid { grid-template-columns: 1fr; }
 }
@@ -514,7 +514,6 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
     .filtros { width: 100%; }
     .filtros input[type="search"] { min-width: 0; flex: 1; }
 
-    /* tabelas viram cartões */
     .tabela-responsiva thead { display: none; }
     .tabela-responsiva, .tabela-responsiva tbody, .tabela-responsiva tr, .tabela-responsiva td { display: block; width: 100%; }
     .tabela-responsiva tr { padding: 12px 14px; border-bottom: 1px solid var(--border); }
@@ -532,7 +531,6 @@ tr.linha-concluida td:not(.acoes) { opacity: 0.6; }
     .modal-content { padding: 20px 16px; }
     .form-dupla { grid-template-columns: 1fr; }
 
-    /* editor de itens em duas linhas por item */
     .itens-cab { display: none; }
     .item-linha {
         grid-template-columns: 64px minmax(0, 1fr) 38px;
